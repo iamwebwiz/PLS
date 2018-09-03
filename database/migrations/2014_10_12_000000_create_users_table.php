@@ -20,6 +20,8 @@ class CreateUsersTable extends Migration
             $table->string('username')->unique();
             $table->string('email')->unique();
             $table->string('mobile')->nullable();
+            $table->string('image')->nullable();
+            $table->integer('role')->default(0)->comment('0 -> user, 1 -> agent, 2 -> admin');
             $table->string('city')->nullable();
             $table->string('state')->nullable();
             $table->string('country')->nullable();

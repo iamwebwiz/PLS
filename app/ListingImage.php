@@ -10,4 +10,9 @@ class ListingImage extends Model
     {
         return $this->belongsTo(Listing::class);
     }
+
+    public function getImageURL()
+    {
+        return $this->image;
+    }
 }

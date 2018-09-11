@@ -17,7 +17,7 @@ class CreateListingsTable extends Migration
             $table->increments('id');
             $table->string('title');
             $table->string('location');
-            $table->double('price');
+            $table->float('price', 20);
             $table->longText('description');
             $table->integer('user_id')->unsigned();
             $table->timestamps();

@@ -19,6 +19,8 @@ class CreateListingsTable extends Migration
             $table->string('address');
             $table->string('city');
             $table->string('state');
+            $table->string('phone')->nullable();
+            $table->string('email')->nullable();
             $table->float('price', 20);
             $table->longText('description');
             $table->integer('user_id')->unsigned();

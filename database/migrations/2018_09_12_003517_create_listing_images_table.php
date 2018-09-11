@@ -14,7 +14,9 @@ class CreateListingImagesTable extends Migration
     public function up()
     {
         Schema::create('listing_images', function (Blueprint $table) {
-            $table->increments('id');
+            // $table->increments('id');
+            $table->string('image');
+            $table->integer('listing_id');
             $table->timestamps();
         });
     }

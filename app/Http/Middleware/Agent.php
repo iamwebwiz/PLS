@@ -15,6 +15,10 @@ class Agent
      */
     public function handle($request, Closure $next)
     {
+        if (auth()->guest() || auth()->user()->role !== 1) {
+            return redirect('login');
+        }
+
         return $next($request);
     }
 }

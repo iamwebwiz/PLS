@@ -19,4 +19,28 @@ class ListingController extends Controller
 
         return $listings;
     }
+
+    public function create()
+    {
+        return;
+    }
+
+    public function store(Request $request)
+    {
+        return;
+    }
+
+    public function show($id)
+    {
+        $listing = Listing::findOrFail($id);
+
+        return $listing;
+    }
+
+    public function update(Request $request, $id)
+    {
+        $listing = Listing::findOrFail($id);
+
+        return $listing;
+    }
 }

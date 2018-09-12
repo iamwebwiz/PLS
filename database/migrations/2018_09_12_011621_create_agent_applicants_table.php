@@ -19,7 +19,6 @@ class CreateAgentApplicantsTable extends Migration
             $table->string('lastname');
             $table->string('email');
             $table->string('phone');
-            $table->string('image')->nullable();
             $table->string('city');
             $table->string('state');
             $table->string('country');

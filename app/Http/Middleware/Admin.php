@@ -15,6 +15,10 @@ class Admin
      */
     public function handle($request, Closure $next)
     {
+        if (auth()->guest() || auth()->user()->role !== 2) {
+            return redirect('login');
+        }
+
         return $next($request);
     }
 }

@@ -16,3 +16,15 @@ Route::get('/', 'FrontendController@index');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+// agent routes
+Route::group(['prefix' => 'agent', 'namespace' => 'Agent', 'middleware' => 'agent'], function() {
+    // agent dashboard
+    Route::get('/', 'HomeController@index');
+
+    // agent profile
+    Route::get('profile', 'ProfileController@index');
+
+    // agent listings
+    Route::get('listings', 'ListingController@index');
+});

@@ -24,4 +24,7 @@ Route::group(['prefix' => 'agent', 'namespace' => 'Agent', 'middleware' => 'agen
 
     // agent profile
     Route::get('profile', 'ProfileController@index');
+
+    // agent listings
+    Route::get('listings', 'ListingController@index');
 });

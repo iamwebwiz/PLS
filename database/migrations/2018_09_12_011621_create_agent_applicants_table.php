@@ -15,6 +15,14 @@ class CreateAgentApplicantsTable extends Migration
     {
         Schema::create('agent_applicants', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('firstname');
+            $table->string('lastname');
+            $table->string('email');
+            $table->string('phone');
+            $table->string('image')->nullable();
+            $table->string('city');
+            $table->string('state');
+            $table->string('country');
             $table->timestamps();
         });
     }

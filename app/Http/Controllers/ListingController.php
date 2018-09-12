@@ -10,4 +10,11 @@ class ListingController extends Controller
     {
         $this->middleware('auth');
     }
+
+    public function index()
+    {
+        $listings = auth()->user()->listings;
+
+        return $listings;
+    }
 }

@@ -11,4 +11,9 @@ class HomeController extends Controller
     {
         $this->middleware('agent');
     }
+
+    public function index()
+    {
+        return;
+    }
 }
